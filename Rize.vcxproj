@@ -139,12 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Option.cpp" />
+    <ClCompile Include="Lib\Option.cpp" />
+    <ClCompile Include="Lib\String.cpp" />
     <ClCompile Include="Rize.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Option.h" />
+    <ClInclude Include="Lib\Lib.h" />
+    <ClInclude Include="Lib\Option.h" />
+    <ClInclude Include="Lib\Pch.h" />
+    <ClInclude Include="Lib\String.h" />
     <ClInclude Include="Pch.h" />
+    <ClInclude Include="Platform\Memory.h" />
+    <ClInclude Include="Platform\Pch.h" />
+    <ClInclude Include="Platform\Platform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

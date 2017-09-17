@@ -11,6 +11,5 @@
 #include <string>
 #include <unordered_map>
 #include <cstdarg>
-
-#include "Platform/Platform.h"
-#include "Lib/Lib.h"
+#include "../Platform/Platform.h"
+#include "Lib.h"

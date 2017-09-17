@@ -17,24 +17,27 @@ enum Param {
     OP_INT,
     OP_BOOL,
     OP_STRING,
+    OP_NETADDRESS
 };
 
 struct Elem {
-    unsigned     index;
-    char         shortKey;
-    std::wstring longKey;
-    std::wstring desc;
-    Param        param;
+    unsigned index;
+    char     shortKey;
+    CString  longKey;
+    CString  desc;
+    Param    param;
 };
 
 class IOption {
 public:
-    virtual const bool CheckOption (const unsigned index);
-    virtual const bool CheckOption (const char shortKey);
-    virtual const bool CheckOption (const std::wstring longKey);
+    //virtual const bool CheckOption (const unsigned index);
+    //virtual const bool CheckOption (const char shortKey);
+    //virtual const bool CheckOption (const std::wstring longKey);
+
+    virtual bool Parse (CString commandArgs);
 
 	virtual const bool      GetBoolParam (unsigned index, bool default=false) = 0;
-    virtual const wchar_t * GetStrParam (unsigned index, wchar_t * default=nullptr) = 0;
+    virtual const CString * GetStrParam (unsigned index, CString * default=nullptr) = 0;
     virtual const int       GetIntParam (unsigned index, int default=0) = 0;
 };
 
