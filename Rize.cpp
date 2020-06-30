@@ -17,6 +17,7 @@ int main(int argc, char ** argv) {
         //  key, short key, long key, desc, additional param 
         { 0, 'h', "host", "host address", Option::OP_NETADDRESS },
         { 0, 'p', "port", "port"        , Option::OP_INT },
+	{ 0, 't', "test", "test"        , Option::OP_INT },
     });
 
 	return 0;
